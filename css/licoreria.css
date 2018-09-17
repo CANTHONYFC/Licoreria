@@ -1,0 +1,173 @@
+body {
+ font-family: Verdana, Geneva, sans-serif
+margin: 0;
+   background-size:100% 100%;
+   background-attachment: fixed;
+}
+.portada{
+  background-color: black;
+  color:#ccc;
+
+position: center;
+  margin: 1px auto;
+margin-top: 0px;
+
+  }
+  .container {
+  
+  background-color: #C4F3F3;
+  
+ margin: auto;
+  width: 50%;
+ border-left: 3px;
+ border-style: solid;
+ border-color:black; 
+margin-top: 10px;
+}
+.col-25 {
+float: left;
+  width: 45%;
+
+
+   margin: auto;
+
+
+}
+img{
+
+    border: black 5px double;
+}
+
+.ola{
+  padding: 0px 0px 0px 0px;
+  display: table;
+  margin: auto;
+    margin-left:25px; 
+    width: 400px;
+    margin-top: 1px;
+
+}
+fieldset{
+  padding: 10px 10px 1px 1px;
+  display: table;
+  margin: auto;
+    margin-left:25px; 
+    width: 230px;
+}input{
+max-width:40%;
+   border: black 1px solid ;
+   background-color: #C4F3F3;
+
+}
+p {
+   
+ margin-top: 0px;
+ 
+  margin-left:25px;                                                    
+  color: #DA0606;                           
+
+}
+label {
+  padding: 1px 1px 1px 1px;
+  display: table;
+  margin: auto;
+    margin-left:25px; 
+
+}h4 {
+  padding: 1px 1px 1px 1px;
+  display: table;
+  margin: auto;
+    margin-left:25px; 
+}
+select{
+ 
+ width: 230px;
+  display: table;
+  margin: auto;
+   margin-left:25px; 
+   height: 28px;
+
+}
+
+.col-6 {
+  width: 40%;
+
+
+ margin: auto;
+ float: left;
+
+}
+.col-5 {
+  width: 22%;
+
+
+ margin: auto;
+ float: left;
+
+}.col-10 {
+  width:70%;
+
+
+ margin: auto;
+margin-left:20px;
+
+}.col-11 {
+  width:50%;
+
+
+margin-left:150px;
+margin-top:0px;
+
+}
+
+.col-10 p {
+  
+margin-top: 0px;
+ 
+  margin-left:0px;                                                    
+  color: #DA0606; 
+
+}
+
+.col-75 {
+  width: 40%;
+
+
+ margin: auto;
+ float: right;
+
+}
+ .row {
+  
+width: 100%;
+margin: auto;
+ 
+ 
+}
+.row:after {
+  content: "";
+  display: table;
+width: 70%;
+  clear: both;
+}
+
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 70%;
+    margin-top: 0;
+  }
+}
+
+
+
+
+
+
+
+h1 {
+	font-weight: bold;
+	color: white;
+	font-size: 30px;
+  margin-top: 0px;
+}

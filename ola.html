@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>
+		
+
+
+	</title>
+</head>
+<body><input type="text" id="inputText" readlonly="readonly">
+<br>
+<br>
+<br>
+<input type="text" oninput="enviarTexto()"   id="inputText2">
+
+</form>
+
+<script>
+    function enviarTexto()
+    {
+      var texto=document.getElementById("inputText2").value;
+      document.getElementById("inputText").value=texto;
+
+    }﻿</script>
+
+</body>
+</html>

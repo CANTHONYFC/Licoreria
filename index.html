@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="utf-8">
+	 <link rel="stylesheet" href="css/licoreria.css">
+
+	<body>
+ 
+<br>
+<br>
+<br>
+
+
+</form>
+
+<script>
+    function enviarTexto()
+    {
+ var Descuento2,Descuento1,totalDESCUENTO,costo,recargo1,importe,igv,total;
+var Descuento1=0;
+var Descuento2=0;
+var recargo1=0;
+
+  var producto=document.getElementById("orden").value;
+ var situacion=document.getElementById("co2");
+ var situacion2=document.getElementById("co1");
+
+ var recargo=document.getElementById("check");
+ var formadepago1=document.getElementById("forma");
+var formadepago2=document.getElementById("forma1");
+
+
+if(producto=="1")
+{
+costo=80.5;
+}
+if(producto=="2")
+{
+costo=90.50;
+}
+if(producto=="3")
+{
+costo=220.20;
+}if(producto=="4")
+{
+costo=350.70;
+}if(producto=="")
+{
+costo=0;
+}
+
+if(situacion.checked){
+
+Descuento1=5.20;
+
+}if(situacion2.checked){
+Descuento1=2.00;
+
+}
+if(formadepago1.checked){
+
+Descuento2=15*costo/100;
+
+}if(formadepago2.checked){
+Descuento2=5*costo/100;
+}
+
+if(recargo.checked){
+recargo1=10.00;
+}
+
+
+
+
+
+totalDESCUENTO=Descuento2+Descuento1;
+
+
+
+Inporte=costo+recargo1-totalDESCUENTO;
+igv=19*Inporte/100;
+total=Inporte+igv;
+
+ document.getElementById("basico").value=costo;
+ document.getElementById("Descuento").value=Descuento1+Descuento2;
+ document.getElementById("Recargo").value=recargo1;
+document.getElementById("Inporte").value=Inporte;
+document.getElementById("IGV").value=igv;
+document.getElementById("total").value=total;
+
+
+    }﻿</script>
+
+
+
+
+
+
+
+
+
+
+ <div class="container">
+
+   <div class="portada" >
+<h1 align="center"  >LICORERIA LA MUERTE</h1>
+</div>
+ <form>
+
+<div class="row">
+      <div class="col-25">
+        <h4>Informe de Nuestros Productos :</h4>
+    </br>
+<select id="orden" onclick="enviarTexto()"    name="orden">
+  <option value="1">agua ardiente</option>
+  <option value="2">ADVOCAAT</option>
+  <option value="3">AMARETTO</option>
+  <option value="4">ANÍS</option>
+</select>
+<p>*los precios no incluyen IGV</p>
+
+  <fieldset style="border-color:#6A8592;">
+    </br>
+  <legend align="left">Situacion</legend>
+<input   onclick="enviarTexto()" type="radio" id="co1" name="conbo" value="1"> Nuevo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input onclick="enviarTexto()" type="radio" id="co2" name="conbo" value="2"> Antiguo
+</br></br>
+  </fieldset>
+<div class="ola">
+  <div class="col-5">
+    </br>
+  <input type="checkbox"  onclick="enviarTexto()" id="check" name="chek" value="1">Recargo</input>
+</div></br> <div class="col-10">
+  <p align="left">(unicamente a provincia)</p>
+
+</div> </div>
+</br>
+
+<fieldset style="border-color:#6A8592;">
+    </br>
+  <legend align="left">Forma de Pago </legend>
+<input onclick="enviarTexto()" type="radio" id="forma" name="pago" value="1"> Contado
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input onclick="enviarTexto()" type="radio"id="forma1" name="pago" value="2"> Partes
+</br></br>
+  </fieldset>
+
+</br></br>
+  <div class="ola" >
+  <div class="col-6">
+  <label  for="fname">costo basico:</label>
+</div> <div class="col-11">
+  <input type="text" oninput="enviarTexto()"   id="basico" >
+
+</div></div>
+<div class="ola">
+  <div class="col-6">
+  <label for="fname">Descuento:</label>
+</div> <div class="col-11">
+  <input type="input" id="Descuento"  name="Descuento">
+
+</div></div>
+<div class="ola">
+  <div class="col-6">
+
+  <p>*Recargo :</p>
+</div> <div class="col-11">
+  <input id="Recargo" type="input" name="Recargo">
+
+</div></div>
+      
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <img  border="2px"   src="imagenes/licores.jpg" style="max-width: 100%" width="400" height="350">
+      </br> </br> 
+
+    <div class="ola">
+  <div class="col-6">
+  <label for="fname">Importe :</label>
+</div> <div class="col-11">
+  <input id="Inporte" type="input" name="Inporte">
+
+</div></div>   
+    
+<div class="ola">
+  <div class="col-6">
+  <label for="fname">IGV(19%):</label>
+</div> <div class="col-11">
+  <input id="IGV"  type="input" >
+
+</div></div><div class="ola">
+  <div class="col-6">
+  <label for="fname">Total a Pagar:</label>
+</div> <div class="col-11">
+  <input  id="total" type="text" name="Total">
+
+</div></div>
+
+
+
+
+
+
+
+      <div class="col-75">
+
+      </div>
+    </div>
+    <div class="row">
+      
+      <div class="col-75">
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+ 
+  
+    </div>
+    
+
+
+
+
+
+   </div>
+
+</form>
+    </body>
+		
+</html>
